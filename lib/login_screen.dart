@@ -34,24 +34,24 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             TextField(
               controller: emailController,
-              decoration: InputDecoration(labelText: "Email"),
+              decoration: const InputDecoration(labelText: "Email"),
               onTap: () {
                 setState(() {
                   visible = false;
                 });
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 4,
             ),
             TextField(
               controller: passwordController,
-              decoration: InputDecoration(labelText: "Password"),
+              decoration: const InputDecoration(labelText: "Password"),
               obscureText: true,
               onTap: () {
                 setState(() {
@@ -59,26 +59,28 @@ class _LoginScreenState extends State<LoginScreen> {
                 });
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
               onPressed: () async {
                 try {
-                  await FirebaseAuth.instance.signInWithEmailAndPassword(
-                      email: emailController.text.trim(),
-                      password: passwordController.text.trim());
-
-                  //
+                  //check if the given user is an admin by its role
+                  String? email = emailController.text.split("@")[0];
                   final ref = FirebaseDatabase.instance.ref();
-                  final snapshot = await ref
-                      .child('users/${FirebaseAuth.instance.currentUser!.uid}')
-                      .get();
+                  final snapshot = await ref.child('users/$email').get();
                   if (snapshot.exists) {
-                    final x = jsonDecode(snapshot.value!.toString());
-                    print(x);
+                    //sign in
+                    await FirebaseAuth.instance.signInWithEmailAndPassword(
+                        email: emailController.text.trim(),
+                        password: passwordController.text.trim());
+
+                    //change it to map
+                    Map roleValue =
+                        Map<String, dynamic>.from(snapshot.value as Map);
                   } else {
-                    print('No data available.');
+                    throw FirebaseAuthException(
+                        message: 'No data available.', code: '00');
                   }
 
                   //

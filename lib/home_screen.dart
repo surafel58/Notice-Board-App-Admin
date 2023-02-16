@@ -60,6 +60,8 @@ class _HomeScreenState extends State<HomeScreen> {
     futureFiles = FirebaseStorage.instance.ref('/Registrar files').listAll();
   }
 
+//loading mechemer
+  //
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
@@ -67,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: const Text("Home"),
         actions: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -95,11 +95,15 @@ class _SignupScreenState extends State<SignupScreen> {
                                 password: passwordController.text.trim());
 
                         // add the user role in database
-                        String? id = FirebaseAuth.instance.currentUser?.uid;
+                        String? email = FirebaseAuth
+                            .instance.currentUser?.email!
+                            .split("@")[0];
+                        print(email);
                         DatabaseReference ref =
-                            FirebaseDatabase.instance.ref("users/$id");
+                            FirebaseDatabase.instance.ref("users/$email");
 
                         await ref.set({"role": selectedItem});
+                        ;
                         //
 
                         showDialog(
