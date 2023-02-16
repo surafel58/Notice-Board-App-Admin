@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 const Departments = [
   "Registrar",
   "Computer Science Department",
@@ -6,5 +8,7 @@ const Departments = [
   "Biology Department",
   "Chemistry Department",
   "Geography Department",
-  "Physical Science Department",
+  "Sport Science Department",
 ];
+
+const kPrimaryColor = Colors.teal;
