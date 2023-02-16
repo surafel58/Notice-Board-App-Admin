@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "472475044440",
+    "project_id": "digital-notice-board-edbfa",
+    "storage_bucket": "digital-notice-board-edbfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472475044440:android:72e67678c25ca3679ad82d",
+        "android_client_info": {
+          "package_name": "com.dnb.digital_notice_board"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472475044440-jj4hv4d6qm72pk2dflfgpj6i8fc9dq2k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAjqWFXdp4RLzMPvg6etJk4fqq_qMrnPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472475044440-jj4hv4d6qm72pk2dflfgpj6i8fc9dq2k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472475044440:android:febc24b2ab1767119ad82d",
+        "android_client_info": {
+          "package_name": "com.dnb_admin.notice_board_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472475044440-jj4hv4d6qm72pk2dflfgpj6i8fc9dq2k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAjqWFXdp4RLzMPvg6etJk4fqq_qMrnPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472475044440-jj4hv4d6qm72pk2dflfgpj6i8fc9dq2k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
