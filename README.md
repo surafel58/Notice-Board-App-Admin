@@ -1,10 +1,15 @@
-# notice_board_admin
+# Notice Board App admin 
 
-A new Flutter project.
+A Flutter app which is built for educational institution that is used to post different notices related with different departments (Registrar, Departments).
+
+## Tools used
+Flutter 
+Firebase
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+step 1 - Clone the project.
+step 2 - 
 
 A few resources to get you started if this is your first Flutter project:
 
