@@ -1,6 +1,6 @@
 # Notice Board App admin 
 
-A Flutter app which is built for educational institution that is used to post different notices related with different departments (Registrar, Departments).
+A Flutter app which is built for educational institution that is used to post different notices for students related with different departments (Registrar, Departments).
 
 ## Tools used
 Flutter 
